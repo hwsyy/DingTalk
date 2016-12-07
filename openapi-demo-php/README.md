@@ -1,33 +1,5 @@
 ISV应用和企业应用php demo
-注意，这里以企业应用开发为主,主要阅读corp目录文档即可。
-
-[全局状态码说明](https://open-doc.dingtalk.com/docs/doc.htm?spm=a219a.7629140.0.0.WbAWKu&treeId=172&articleId=104965&docType=1)
-
-[客户端开发文档](https://open-doc.dingtalk.com/doc2/detail?spm=0.0.0.0.fQHmEt&treeId=171&articleId=104906&docType=1)
-
-[服务端开发文档](https://open-doc.dingtalk.com/doc2/detail?spm=0.0.0.0.WT3jcP&treeId=172&articleId=104981&docType=1)
-
-[PC端开发文档](https://open-doc.dingtalk.com/doc2/detail?spm=0.0.0.0.4l8NI2&treeId=176&articleId=104958&docType=1)
-
-[JSAPI调试工具](https://wsdebug.dingtalk.com/?spm=a219a.7629140.0.0.Qe1EU1)
-[钉钉服务端API调试工具](https://debug.dingtalk.com/?spm=a219a.7629140.0.0.U8SfAo)
-
-三者区别待续....
-
-###本DEMO具体实现
-
-1.URL回调流程
-
-请查看[文档](http://ddtalk.github.io/dingTalkDoc/#2-回调接口（分为五个回调类型）)
-
-2.jsapi权限验证配置流程
-
-请查看[文档](http://ddtalk.github.io/dingTalkDoc/#页面引入js文件)
-
-3.免登流程
-
-请查看[文档](http://ddtalk.github.io/dingTalkDoc/#手机客户端微应用中调用免登)
-
+注意，这里以企业应用开发为主。
 
 目录结构：
 
@@ -40,20 +12,6 @@ corp目录：企业应用php demo
 运行前先看开发文档：http://ddtalk.github.io/dingTalkDoc/?spm=a3140.7785475.0.0.Q5c5r7
 
 ## Getting Started
-
-
-###创建企业应用
-1.进入`https://oa.dingtalk.com/#/microApp/microAppList`,点击『新建应用』
-
-2.配置PHP服务器环境（php+apache/nginx），安装mcrypt扩展（注意，一定要安装mcrypt扩展）,保证apache服务根目录与可写权限（存储json数据）
-
-3.微应用主页地址填写。地址为`根目录/index.php`，(例如，工程部署在ip地址为123.56.71.118的主机上，端口为8080，那么微应用首页地址即为：`http://123.56.71.118:8080/index.php`，PC版首页地址为：`http://123.56.71.118:8080/indexpc.php`，假如你有域名的话，也可以把IP地址换成域名)
-  修改config.php中的CORPID，SECRET，AGENTID，其中CORPID，SECRET在微应用设置页面`https://oa.dingtalk.com/#/microApp/microAppSet`获取，AGENTID在创建微应用的时候可以获取
-
-4.微应用创建成功后，需要把微应用首页地址改为'根目录/index.php'
-
-5.打开钉钉，进入对应企业，即可看到微应用，点击进入
-
 
 ISV应用注册开发流程
 ###创建套件前
@@ -89,3 +47,30 @@ ISV应用注册开发流程
 11.打开钉钉，进入对应企业，即可看到微应用，点击进入
 
 注意：Ticket推送状态成功之后，再授权企业
+
+###创建企业应用
+1.进入`https://oa.dingtalk.com/#/microApp/microAppList`,点击『新建应用』
+
+2.配置PHP服务器环境（php+apache/nginx），安装mcrypt扩展（注意，一定要安装mcrypt扩展）,保证apache服务根目录与可写权限（存储json数据）
+
+3.微应用主页地址填写。地址为`根目录/index.php`，(例如，工程部署在ip地址为123.56.71.118的主机上，端口为8080，那么微应用首页地址即为：`http://123.56.71.118:8080/index.php`，PC版首页地址为：`http://123.56.71.118:8080/indexpc.php`，假如你有域名的话，也可以把IP地址换成域名)
+  修改config.php中的CORPID，SECRET，AGENTID，其中CORPID，SECRET在微应用设置页面`https://oa.dingtalk.com/#/microApp/microAppSet`获取，AGENTID在创建微应用的时候可以获取
+
+4.微应用创建成功后，需要把微应用首页地址改为'根目录/index.php'
+
+5.打开钉钉，进入对应企业，即可看到微应用，点击进入
+
+
+###本DEMO具体实现
+
+1.URL回调流程
+
+请查看[文档](http://ddtalk.github.io/dingTalkDoc/#2-回调接口（分为五个回调类型）)
+
+2.jsapi权限验证配置流程
+
+请查看[文档](http://ddtalk.github.io/dingTalkDoc/#页面引入js文件)
+
+3.免登流程
+
+请查看[文档](http://ddtalk.github.io/dingTalkDoc/#手机客户端微应用中调用免登)
